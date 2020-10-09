@@ -18,7 +18,7 @@ LFLAGS=
 # Select window API for TinyGL: 
 
 # standard X11 GLX like API 
-TINYGL_USE_GLX=y
+TINYGL_USE_GLX=n
 
 # BEOS API
 #TINYGL_USE_BEOS=y
