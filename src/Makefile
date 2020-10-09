@@ -1,4 +1,4 @@
-include ../config.mk
+include config.mk
 
 OBJS= api.o list.o vertex.o init.o matrix.o texture.o \
       misc.o clear.o light.o clip.o select.o get.o error.o \
@@ -12,7 +12,7 @@ ifdef TINYGL_USE_NANOX
 OBJS += nglx.o
 endif
 
-INCLUDES = -I../include
+INCLUDES = -I./include
 LIB = libTinyGL.a
 
 all: $(LIB)
@@ -20,7 +20,6 @@ all: $(LIB)
 $(LIB): $(OBJS)
 	rm -f $(LIB)
 	ar rcs $(LIB) $(OBJS)
-	cp $(LIB) ../lib
 
 clean:
 	rm -f *~ *.o *.a

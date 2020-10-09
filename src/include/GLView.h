@@ -16,8 +16,8 @@
 
 #include <interface/View.h>
 #include <support/Locker.h>
-#include <GL/gl.h>
-#include <GL/oscontext.h>
+#include "GL/gl.h"
+#include "GL/oscontext.h"
 #include <game/WindowScreen.h>
 #include <game/DirectWindow.h>
 

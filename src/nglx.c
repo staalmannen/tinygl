@@ -1,6 +1,6 @@
 /* simple glx like driver for TinyGL and Nano X */
-#include <GL/gl.h>
-#include <GL/nglx.h>
+#include "include/GL/gl.h"
+#include "include/GL/nglx.h"
 #include <microwin/nano-X.h>
 #include "zgl.h"
 
