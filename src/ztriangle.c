@@ -169,13 +169,13 @@ void ZB_fillTriangleSmooth(ZBuffer *zb,
 #endif /* TGL_FEATURE_RENDER_BITS */
 
 #include "ztriangle.h"
-}
+} //EOF smooth fill triangle
 
 void ZB_setTexture(ZBuffer *zb,PIXEL *texture)
 {
     zb->current_texture=texture;
 }
-
+//Ignore this it is never used
 void ZB_fillTriangleMapping(ZBuffer *zb,
 			    ZBufferPoint *p0,ZBufferPoint *p1,ZBufferPoint *p2)
 {

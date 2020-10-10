@@ -3,7 +3,7 @@
 
 # linux
 CC= gcc
-CFLAGS= -g -Wall -O2
+CFLAGS= -Wall -O3 -msse3
 LFLAGS=
 
 # for BeOS PPC
@@ -31,7 +31,8 @@ TINYGL_USE_GLX=n
 
 ifdef TINYGL_USE_GLX
 # Linux
-UI_LIBS= -L/usr/X11R6/lib -lX11 -lXext
+#UI_LIBS= -L/usr/X11R6/lib -lX11 -lXext
+UI_LIBS=
 UI_INCLUDES= 
 # Solaris
 #UI_LIBS= -L/usr/X11/lib -lX11 -lXext -lsocket -lnsl

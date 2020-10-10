@@ -127,7 +127,7 @@ static void ZB_copyBuffer(ZBuffer * zb,
     n = zb->xsize * PSZB;
     for (y = 0; y < zb->ysize; y++) {
 	memcpy(p1, q, n);
-	p1 += linesize;
+	p1 += linesize; //TODO make this a predictable behavior.
 	q = (PIXEL *) ((char *) q + zb->linesize);
     }
 }

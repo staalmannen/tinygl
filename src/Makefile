@@ -6,7 +6,7 @@ OBJS= api.o list.o vertex.o init.o matrix.o texture.o \
       zmath.o image_util.o oscontext.o msghandling.o \
       arrays.o specbuf.o memory.o
 ifdef TINYGL_USE_GLX
-OBJS += glx.o
+#OBJS += glx.o
 endif
 ifdef TINYGL_USE_NANOX
 OBJS += nglx.o
@@ -15,15 +15,17 @@ endif
 INCLUDES = -I./include
 LIB = libTinyGL.a
 
-all: $(LIB)
+all: $(LIB) SDL
 
 $(LIB): $(OBJS)
 	rm -f $(LIB)
 	ar rcs $(LIB) $(OBJS)
-
+	
+SDL:
+	cd SDL_Examples && $(MAKE) && cd ..
 clean:
 	rm -f *~ *.o *.a
-
+	cd SDL_Examples && $(MAKE) clean && cd ..
 .c.o:
 	$(CC) $(CFLAGS) $(INCLUDES) -c $*.c
 

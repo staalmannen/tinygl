@@ -684,6 +684,9 @@ void glPolygonMode(int face,int mode);
 void glBegin(int type);
 void glEnd(void);
 
+//Added by GEK! New functions! New toys! Play with them!
+void glSetEnableSpecular(int s);
+
 #define PROTO_GL1(name)				\
 void gl ## name ## 1f(float);	\
 void gl ## name ## 1d(double);	\
