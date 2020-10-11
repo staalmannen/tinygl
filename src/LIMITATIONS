@@ -100,8 +100,7 @@ TinyGL.
 
 The function accepts only RGB UNSIGNED_BYTES bitmaps. They are
 internally resized to 256x256 so you'd better use that size. No
-mipmapping is implemented although it will come if asked. No borders
-are implemented.
+mipmapping is implemented (TODO)
 
 ************ glTexEnvi
 
@@ -166,41 +165,4 @@ GL_LINE_WIDTH, GL_LINE_WIDTH_RANGE, GL_POINT_SIZE, GL_POINT_SIZE_RANGE
 - OK
 
 ------------------------------------------------------------------------------
-
-TinyGL GLX emulation:
-
-
-************ glXQueryExtension
-
-Returns always True
-
-************ glXChooseVisual
-
-Only 8 bit Pseudocolor or 16 bit Truecolor Visual are accepted. The
-attribute list is ignored.
-
-************ glXCreateContext
-
-The sharing is not implemented although the code could handle it.
-
-************ glXDestroyContext
-
-OK.
-
-************ glXMakeCurrent
-
-Not all the syntax is supported yet, in particular with the 'NULL' or
-'None' parameters.
-
-
-************ glXSwapBuffers
-
-OK.
-
-************ glXWaitGL / glXWaitX
-
-Ignored.
-
-
-See README.BEOS for BeOS limitations.
 
