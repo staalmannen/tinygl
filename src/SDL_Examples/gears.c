@@ -232,13 +232,16 @@ int main(int argc, char **argv) {
     switch( screen->format->BitsPerPixel ) {
     case  8:
         fprintf(stderr,"ERROR: Palettes are currently not supported.\n");
+        fprintf(stderr,"\nUnsupported by maintainer!!!");
         return 1;
     case 16:
         pitch = screen->pitch;
+        fprintf(stderr,"\nUnsupported by maintainer!!!");
         mode = ZB_MODE_5R6G5B;
         break;
     case 24:
         pitch = ( screen->pitch * 2 ) / 3;
+        fprintf(stderr,"\nUnsupported by maintainer!!!");
         mode = ZB_MODE_RGB24;
         break;
     case 32:
@@ -314,7 +317,7 @@ int main(int argc, char **argv) {
             fprintf(stderr, "SDL ERROR: Can't lock screen: %s\n", SDL_GetError());
             return 1;
         }
-        ZB_copyFrameBuffer(frameBuffer, screen->pixels, pitch);
+        ZB_copyFrameBuffer(frameBuffer, screen->pixels, screen->pitch);
         if ( SDL_MUSTLOCK(screen) ) SDL_UnlockSurface(screen);
         SDL_Flip(screen);
 

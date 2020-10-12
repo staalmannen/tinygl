@@ -9,13 +9,16 @@ must not be used.
 - The following flags are handled:
 
 GL_CULL_FACE, GL_LIGHTING, GL_COLOR_MATERIAL, GL_TEXTURE_2D, GL_NORMALIZE,
-GL_LIGHTx, GL_POLYGON_OFFSET_FILL, GL_POLYGON_OFFSET_POINT,
+GL_LIGHTx, GL_POLYGON_OFFSET_FILL, GL_POLYGON_OFFSET_POINT, GL_POLYGON_STIPPLE,
 GL_POLYGON_OFFSET_LINE
 
 
 - GL_DEPTH_TEST is accepted, but it is only used for lines. For all
   other primitives, Z buffer use is assumed.  The DepthMode is
   hardcoded as GL_LESS (OpenGL default).
+
+************ glPolygonStipple
+OK. (Implemented by Gek! The variables for it are stored per zBuffer rather than per context.)
 
 ************ glShadeModel
 

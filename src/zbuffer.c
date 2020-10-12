@@ -158,28 +158,19 @@ static void ZB_copyFrameBufferRGB32(ZBuffer * zb,
 
     q = zb->pbuf;
     p1 = (unsigned int *) buf;
-
+	puts("\nBEING CALLED\n");
     for (y = 0; y < zb->ysize; y++) {
 	p = p1;
 	n = zb->xsize >> 2;
 	do {
 	    v = *(unsigned int *) q;
-#if BYTE_ORDER == BIG_ENDIAN
 	    RGB16_TO_RGB32(w1, w0, v);
-#else
-	    RGB16_TO_RGB32(w0, w1, v);
-#endif
 	    p[0] = w0;
 	    p[1] = w1;
-
 	    v = *(unsigned int *) (q + 2);
-#if BYTE_ORDER == BIG_ENDIAN
 	    RGB16_TO_RGB32(w1, w0, v);
-#else
-	    RGB16_TO_RGB32(w0, w1, v);
-#endif
 	    p[2] = w0;
-	    p[3] = w1;
+	    p[3] = 0;
 
 	    q += 4;
 	    p += 4;

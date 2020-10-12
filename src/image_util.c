@@ -13,7 +13,7 @@ void gl_convertRGB_to_5R6G5B(unsigned short *pixmap,unsigned char *rgb,
   p=rgb;
   n=xsize*ysize;
   for(i=0;i<n;i++) {
-    pixmap[i]=((p[2]&0xF8)<<8) | ((p[1]&0xFC)<<3) | ((p[0]&0xF8)>>3); 
+    pixmap[i]=((p[0]&0xF8)<<8) | ((p[1]&0xFC)<<3) | ((p[2]&0xF8)>>3); 
     p+=3;
   }
 }
