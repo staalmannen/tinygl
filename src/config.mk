@@ -3,7 +3,7 @@
 
 # linux
 CC= gcc
-CFLAGS= -Wall -O3 -msse3
+CFLAGS= -Wall -O3 -msse3 -std=c99
 LFLAGS=
 
 # for BeOS PPC

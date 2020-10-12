@@ -9,7 +9,7 @@ ifdef TINYGL_USE_GLX
 #OBJS += glx.o
 endif
 ifdef TINYGL_USE_NANOX
-OBJS += nglx.o
+#OBJS += nglx.o
 endif
 
 INCLUDES = -I./include

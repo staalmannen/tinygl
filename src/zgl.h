@@ -9,7 +9,9 @@
 #include "zbuffer.h"
 #include "zmath.h"
 #include "zfeatures.h"
-
+#ifndef M_PI
+#define M_PI 3.14159265358979323
+#endif
 #define DEBUG
 /* #define NDEBUG */
 
